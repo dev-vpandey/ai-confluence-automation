@@ -1,0 +1,5 @@
+# Skill defaults — copied to skill-config.yaml by install.sh
+# Edit these values to match your Confluence setup.
+skill:
+  default_space: "YOUR_SPACE_KEY"
+  default_parent_page_id: ""   # optional: numeric ID of parent page

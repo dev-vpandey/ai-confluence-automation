@@ -1,0 +1,64 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="how-it-works">
+    <mxGraphModel dx="2238" dy="1184" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="650" pageHeight="750" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;fontStyle=1;fontSize=15;fillColor=none;strokeColor=none;whiteSpace=wrap;" value="How It Works" vertex="1">
+          <mxGeometry height="30" width="220" x="185" y="15" as="geometry" />
+        </mxCell>
+        <mxCell id="node-user" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=14;" value="You" vertex="1">
+          <mxGeometry height="60" width="160" x="210" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="label-nl" parent="1" style="text;html=1;align=center;fontSize=10;fillColor=none;strokeColor=none;fontStyle=2;fontColor=#555555;whiteSpace=wrap;" value="natural language" vertex="1">
+          <mxGeometry height="24" width="125" x="355" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="node-skill" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;" value="confluence-automation skill&#xa;(Claude Code)" vertex="1">
+          <mxGeometry height="60" width="210" x="185" y="178" as="geometry" />
+        </mxCell>
+        <mxCell id="label-bash" parent="1" style="text;html=1;align=left;fontSize=10;fillColor=none;strokeColor=none;fontStyle=2;fontColor=#555555;whiteSpace=wrap;" value="Bash — executes automatically&#xa;you never run commands" vertex="1">
+          <mxGeometry height="36" width="195" x="390" y="269" as="geometry" />
+        </mxCell>
+        <mxCell id="node-cli" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;" value="confluence_page.py" vertex="1">
+          <mxGeometry height="60" width="200" x="190" y="308" as="geometry" />
+        </mxCell>
+        <mxCell id="node-pat" parent="1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;fontStyle=1;" value="CONFLUENCE_PAT&#xa;env var / ~/.confluence-pat" vertex="1">
+          <mxGeometry height="70" width="170" x="498" y="293" as="geometry" />
+        </mxCell>
+        <mxCell id="label-pat" parent="1" style="text;html=1;align=center;fontSize=9;fillColor=none;strokeColor=none;fontStyle=1;fontColor=#b85450;whiteSpace=wrap;" value="✦ primary" vertex="1">
+          <mxGeometry height="18" width="120" x="521" y="363" as="geometry" />
+        </mxCell>
+        <mxCell id="node-cookies" parent="1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1;" value="~/.confluence-session&#xa;(chmod 600)" vertex="1">
+          <mxGeometry height="70" width="165" x="496" y="407" as="geometry" />
+        </mxCell>
+        <mxCell id="label-cookies" parent="1" style="text;html=1;align=center;fontSize=9;fillColor=none;strokeColor=none;fontStyle=2;fontColor=#888888;whiteSpace=wrap;" value="fallback · expires ~24 h" vertex="1">
+          <mxGeometry height="18" width="150" x="503" y="479" as="geometry" />
+        </mxCell>
+        <mxCell id="node-api" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=13;" value="Confluence REST API" vertex="1">
+          <mxGeometry height="60" width="220" x="180" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="node-url" parent="1" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="✅  Page URL returned to you" vertex="1">
+          <mxGeometry height="55" width="230" x="175" y="618" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-user-skill" edge="1" parent="1" source="node-user" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" target="node-skill" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-skill-cli" edge="1" parent="1" source="node-skill" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" target="node-cli" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-cli-api" edge="1" parent="1" source="node-cli" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" target="node-api" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-api-url" edge="1" parent="1" source="node-api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" target="node-url" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-pat-cli" edge="1" parent="1" source="node-pat" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;strokeWidth=2;strokeColor=#b85450;fontColor=#b85450;fontStyle=2;" target="node-cli" value="load_pat()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-cookies-cli" edge="1" parent="1" source="node-cookies" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;dashed=1;endArrow=open;endFill=0;fontStyle=2;" target="node-cli" value="load_cookies()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

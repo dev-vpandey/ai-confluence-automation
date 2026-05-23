@@ -1,0 +1,34 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Confluence
+.confluence-session
+cookies.json
+
+# Implementation plan
+implementation_planner/
+auth_change_token_plan_impl/
+
+# User config (local, not committed)
+config.yaml
+
+# Skill user config (local, not committed)
+skill-config.yaml
+
+# Claude
+.claude/

@@ -1,0 +1,160 @@
+<!-- ============================================================
+     PRD TEMPLATE
+     Reference: reference/prd_ref_template.md
+     Sections (in order — never reorder, never omit):
+       1.  Header Metadata (info panel)
+       2.  Version History (wrapped table)
+       3.  Stakeholders (wrapped table)
+       4.  TL;DR (info macro)
+       5.  Problem
+       6.  Goals (numbered list)
+       7.  Non-Goals
+       8.  Constraints
+       9.  Proposed Solution (+ UX flow h3 + Edge Cases h3)
+       10. Alternatives Considered (wrapped table)
+       11. Success Criteria (wrapped table)
+       12. Dependencies & Risks (wrapped table)
+       13. Timeline (wrapped table)
+       14. Go-to-Market / Launch
+       15. Open Questions (info macro + task-list)
+       16. References
+     ============================================================ -->
+
+<ac:structured-macro ac:name="toc" ac:schema-version="1">
+  <ac:parameter ac:name="maxLevel">3</ac:parameter>
+</ac:structured-macro>
+
+<ac:structured-macro ac:name="info" ac:schema-version="1">
+  <ac:rich-text-body>
+    <p><strong>Author:</strong> {{AUTHOR}} | <strong>Date:</strong> {{DATE}} | <strong>Status:</strong> {{STATUS}} | <strong>Audience:</strong> {{AUDIENCE}} | <strong>Version:</strong> {{VERSION}}</p>
+  </ac:rich-text-body>
+</ac:structured-macro>
+
+<h2>Version History</h2>
+<table class="wrapped">
+  <thead>
+    <tr><th>Version</th><th>Date</th><th>Author</th><th>Summary of Changes</th></tr>
+  </thead>
+  <tbody>
+    {{VERSION_HISTORY_ROWS}}
+  </tbody>
+</table>
+
+<h2>Stakeholders</h2>
+<table class="wrapped">
+  <thead>
+    <tr><th>Role</th><th>Name</th><th>Responsibility</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>PM Owner</td><td>{{PM_OWNER}}</td><td>Drives decisions</td></tr>
+    <tr><td>Eng Lead</td><td>{{ENG_LEAD}}</td><td>Technical sign-off</td></tr>
+    <tr><td>Exec Sponsor</td><td>{{EXEC_SPONSOR}}</td><td>Budget / priority</td></tr>
+    {{ADDITIONAL_STAKEHOLDER_ROWS}}
+  </tbody>
+</table>
+
+<h2>TL;DR</h2>
+<ac:structured-macro ac:name="info" ac:schema-version="1">
+  <ac:rich-text-body>
+    <ul>
+      <li><strong>What:</strong> {{TLDR_WHAT}}</li>
+      <li><strong>Why now:</strong> {{TLDR_WHY_NOW}}</li>
+      <li><strong>Expected outcome:</strong> {{TLDR_OUTCOME}}</li>
+    </ul>
+  </ac:rich-text-body>
+</ac:structured-macro>
+
+<h2>Problem</h2>
+<p>{{PROBLEM}}</p>
+
+<h2>Goals</h2>
+<ol>
+  {{GOALS}}
+</ol>
+
+<h2>Non-Goals</h2>
+<ul>
+  {{NON_GOALS}}
+</ul>
+
+<h2>Constraints</h2>
+<ul>
+  <li><strong>Budget:</strong> {{BUDGET}}</li>
+  <li><strong>Legal / compliance:</strong> {{LEGAL_COMPLIANCE}}</li>
+  <li><strong>Tech:</strong> {{TECH_CONSTRAINTS}}</li>
+  <li><strong>Timeline:</strong> {{TIMELINE_CONSTRAINT}}</li>
+</ul>
+
+<h2>Proposed Solution</h2>
+<p>{{PROPOSED_SOLUTION}}</p>
+
+<h3>User Experience</h3>
+<ol>
+  {{USER_EXPERIENCE_STEPS}}
+</ol>
+
+<h3>Edge Cases / Error States</h3>
+<ul>
+  {{EDGE_CASES}}
+</ul>
+
+<h2>Alternatives Considered</h2>
+<table class="wrapped">
+  <thead>
+    <tr><th>Option</th><th>Rejected Because</th></tr>
+  </thead>
+  <tbody>
+    {{ALTERNATIVES_ROWS}}
+  </tbody>
+</table>
+
+<h2>Success Criteria</h2>
+<table class="wrapped">
+  <thead>
+    <tr><th>Metric</th><th>Baseline</th><th>Target</th><th>By</th><th>How Measured</th></tr>
+  </thead>
+  <tbody>
+    {{SUCCESS_CRITERIA_ROWS}}
+  </tbody>
+</table>
+
+<h2>Dependencies &amp; Risks</h2>
+<table class="wrapped">
+  <thead>
+    <tr><th>Item</th><th>Type</th><th>Owner</th><th>Mitigation</th></tr>
+  </thead>
+  <tbody>
+    {{DEPENDENCIES_RISKS_ROWS}}
+  </tbody>
+</table>
+
+<h2>Timeline</h2>
+<table class="wrapped">
+  <thead>
+    <tr><th>Phase</th><th>Scope</th><th>Owner</th><th>Target Date</th></tr>
+  </thead>
+  <tbody>
+    {{TIMELINE_ROWS}}
+  </tbody>
+</table>
+
+<h2>Go-to-Market / Launch</h2>
+<ul>
+  <li><strong>Comms plan:</strong> {{COMMS_PLAN}}</li>
+  <li><strong>Feature flag:</strong> {{FEATURE_FLAG}}</li>
+  <li><strong>Docs needed:</strong> {{DOCS_NEEDED}}</li>
+</ul>
+
+<h2>Open Questions</h2>
+<ac:structured-macro ac:name="info" ac:schema-version="1">
+  <ac:rich-text-body>
+    <ac:task-list>
+      {{OPEN_QUESTIONS}}
+    </ac:task-list>
+  </ac:rich-text-body>
+</ac:structured-macro>
+
+<h2>References</h2>
+<ul>
+  {{REFERENCES}}
+</ul>

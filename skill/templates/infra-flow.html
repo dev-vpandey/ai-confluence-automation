@@ -1,0 +1,110 @@
+<!-- ============================================================
+     INFRA FLOW TEMPLATE
+     Reference: reference/infra_flow_ref_template.md
+     Sections (in order — never reorder, never omit):
+       1.  Overview
+       2.  Infrastructure Diagram (diagram placeholder)
+       3.  Environments (wrapped table)
+       4.  Compute (wrapped table)
+       5.  Storage (wrapped table)
+       6.  Network (wrapped table)
+       7.  CI/CD Pipeline (ol)
+       8.  Security Controls (warning macro)
+       9.  Monitoring
+       10. Disaster Recovery
+       11. Known Limitations (warning macro)
+     ============================================================ -->
+
+<ac:structured-macro ac:name="toc" ac:schema-version="1">
+  <ac:parameter ac:name="maxLevel">3</ac:parameter>
+</ac:structured-macro>
+
+<h2>Overview</h2>
+<p>{{INFRA_OVERVIEW}}</p>
+<ul>
+  <li><strong>Owning team:</strong> {{OWNING_TEAM}}</li>
+</ul>
+
+<h2>Infrastructure Diagram</h2>
+{{page.diagram_placeholder}}
+
+<h2>Environments</h2>
+<table class="wrapped">
+  <thead>
+    <tr><th>Environment</th><th>Region</th><th>Account</th><th>Purpose</th></tr>
+  </thead>
+  <tbody>
+    {{ENVIRONMENT_ROWS}}
+  </tbody>
+</table>
+
+<h2>Compute</h2>
+<table class="wrapped">
+  <thead>
+    <tr><th>Service</th><th>Type</th><th>Size</th><th>Count</th><th>Purpose</th></tr>
+  </thead>
+  <tbody>
+    {{COMPUTE_ROWS}}
+  </tbody>
+</table>
+
+<h2>Storage</h2>
+<table class="wrapped">
+  <thead>
+    <tr><th>Service</th><th>Type</th><th>Capacity</th><th>Retention</th><th>Encryption</th></tr>
+  </thead>
+  <tbody>
+    {{STORAGE_ROWS}}
+  </tbody>
+</table>
+
+<h2>Network</h2>
+<table class="wrapped">
+  <thead>
+    <tr><th>Component</th><th>CIDR</th><th>Visibility</th><th>Notes</th></tr>
+  </thead>
+  <tbody>
+    {{NETWORK_ROWS}}
+  </tbody>
+</table>
+
+<h2>CI/CD Pipeline</h2>
+<ol>
+  {{CICD_STEPS}}
+</ol>
+
+<h2>Security Controls</h2>
+<ac:structured-macro ac:name="warning" ac:schema-version="1">
+  <ac:rich-text-body>
+    <ul>
+      <li><strong>IAM roles:</strong> {{IAM_ROLES}}</li>
+      <li><strong>KMS keys:</strong> {{KMS_KEYS}}</li>
+      <li><strong>Secrets manager:</strong> {{SECRETS_MANAGER}}</li>
+      <li><strong>Network policies:</strong> {{NETWORK_POLICIES}}</li>
+    </ul>
+  </ac:rich-text-body>
+</ac:structured-macro>
+
+<h2>Monitoring</h2>
+<ul>
+  <li><strong>Tools:</strong> {{MONITORING_TOOLS}}</li>
+  <li><strong>Dashboards:</strong> {{DASHBOARDS}}</li>
+  <li><strong>Alert thresholds:</strong> {{ALERT_THRESHOLDS}}</li>
+</ul>
+
+<h2>Disaster Recovery</h2>
+<ul>
+  <li><strong>RPO:</strong> {{RPO}}</li>
+  <li><strong>RTO:</strong> {{RTO}}</li>
+  <li><strong>Backup schedule:</strong> {{BACKUP_SCHEDULE}}</li>
+  <li><strong>Failover procedure:</strong> {{FAILOVER_PROCEDURE}}</li>
+</ul>
+
+<h2>Known Limitations</h2>
+<ac:structured-macro ac:name="warning" ac:schema-version="1">
+  <ac:rich-text-body>
+    <ul>
+      {{KNOWN_LIMITATIONS}}
+    </ul>
+  </ac:rich-text-body>
+</ac:structured-macro>

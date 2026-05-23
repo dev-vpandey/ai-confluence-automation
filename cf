@@ -1,0 +1,17 @@
+#!/bin/bash
+# Confluence CLI wrapper
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR"
+
+# Activate venv
+source venv/bin/activate 2>/dev/null || {
+    echo "❌ Setup required:"
+    echo "   python3 -m venv venv"
+    echo "   source venv/bin/activate"
+    echo "   pip install requests"
+    exit 1
+}
+
+# Run Python script
+python src/confluence.py "$@"

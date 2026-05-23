@@ -1,0 +1,94 @@
+<!-- ============================================================
+     AI WIN STORY TEMPLATE
+     Reference: https://confluence.ops.expertcity.com/spaces/DFS/pages/1046071787
+     Sections (must all be present, in order):
+       1. Header label (hardcoded — never change)
+       2. Opening quote (blockquote)
+       3. The Setup (team, SDLC phase, pain points)
+       4. The Approach (tool, workflow fit, prompts used, adoption, How It Works flow)
+       5. The Proof (metrics table 4-col: Metric/Before/After/Delta + info panel headline)
+       6. What We Learned (4 bullets: worked/differently/dead ends/unexpected)
+       7. The Playbook (numbered steps with code blocks + warning panel)
+       8. Voices from the Team (blockquotes)
+       9. What's Next (bullet list)
+      10. Footer hr + hardcoded credit line
+     ============================================================ -->
+
+<blockquote><p><em>"{{OPENING_QUOTE}}"</em></p></blockquote>
+
+<h2>1. The Setup — What Were We Trying to Solve?</h2>
+<p>{{PROBLEM_CONTEXT}}</p>
+<ul>
+  <li><strong>Team / Squad:</strong> {{TEAM}}</li>
+  <li><strong>SDLC Phase:</strong> {{SDLC_PHASE}}</li>
+  <li><strong>The pain point before AI:</strong>
+    <ul>
+      {{PAIN_POINTS}}
+    </ul>
+  </li>
+</ul>
+
+<h2>2. The Approach — How Did We Use AI?</h2>
+<p>{{APPROACH_SUMMARY}}</p>
+<ul>
+  <li><strong>AI Tool Used:</strong> {{AI_TOOLS}}</li>
+  <li><strong>Where it fit in the workflow:</strong> {{WORKFLOW_FIT}}</li>
+  <li><strong>What we prompted / asked it to do:</strong>
+    <ul>
+      {{PROMPTS_USED}}
+    </ul>
+  </li>
+  <li><strong>How the team adopted it:</strong> {{ADOPTION_APPROACH}}</li>
+</ul>
+
+<h3>How It Works</h3>
+<ac:structured-macro ac:name="code" ac:schema-version="1">
+  <ac:parameter ac:name="language">text</ac:parameter>
+  <ac:plain-text-body><![CDATA[{{HOW_IT_WORKS_FLOW}}]]></ac:plain-text-body>
+</ac:structured-macro>
+
+{{OPTIONAL_DETAIL_TABLE}}
+
+<h2>3. The Proof — What Changed?</h2>
+<table class="wrapped">
+  <thead>
+    <tr><th>Metric</th><th>Before</th><th>After</th><th>Delta</th></tr>
+  </thead>
+  <tbody>
+    {{METRICS_ROWS}}
+  </tbody>
+</table>
+<ac:structured-macro ac:name="info" ac:schema-version="1">
+  <ac:rich-text-body><p><strong>The headline number:</strong> {{HEADLINE_NUMBER}}</p></ac:rich-text-body>
+</ac:structured-macro>
+
+<h2>4. What We Learned — The Honest Take</h2>
+<ul>
+  <li>✅ <strong>What worked well:</strong> {{WHAT_WORKED}}</li>
+  <li>⚠️ <strong>What we'd do differently:</strong> {{DO_DIFFERENTLY}}</li>
+  <li>🚫 <strong>What didn't work / dead ends:</strong> {{DEAD_ENDS}}</li>
+  <li>💡 <strong>Unexpected benefit:</strong> {{UNEXPECTED_BENEFIT}}</li>
+</ul>
+
+<h2>5. The Playbook — How Could Another Team Repeat This?</h2>
+<p><strong>One-time setup (~{{SETUP_TIME}} minutes):</strong></p>
+
+{{PLAYBOOK_STEPS}}
+
+<p>The skill auto-loads in Claude Code on next session — no further config needed.</p>
+<p><strong>Daily use:</strong> {{DAILY_USE_DESCRIPTION}}</p>
+
+<ac:structured-macro ac:name="warning" ac:schema-version="1">
+  <ac:rich-text-body><p><strong>Prerequisite / watch out:</strong> {{PREREQUISITES}}</p></ac:rich-text-body>
+</ac:structured-macro>
+
+<h2>6. Voices from the Team</h2>
+{{QUOTES}}
+
+<h2>7. What's Next</h2>
+<ul>
+  {{NEXT_STEPS}}
+</ul>
+
+<hr />
+<p><em>Data AI Win Story | Built with Claude Code — confluence-automation skill | Data Platform Team</em></p>

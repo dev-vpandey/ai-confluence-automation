@@ -1,0 +1,100 @@
+<!-- ============================================================
+     DATA FLOW / ETL PIPELINE TEMPLATE
+     Reference: reference/data_flow_ref_template.md
+     Sections (in order — never reorder, never omit):
+       1.  Overview (info panel)
+       2.  Pipeline Diagram (diagram placeholder)
+       3.  Source Tables (wrapped table)
+       4.  Transformation Steps (ol)
+       5.  Output Schema (wrapped table)
+       6.  Write Specifications
+       7.  Data Quality Checks
+       8.  Volume & Growth (info macro)
+       9.  Dependencies
+       10. SLA & Error Handling (warning macro)
+     ============================================================ -->
+
+<ac:structured-macro ac:name="toc" ac:schema-version="1">
+  <ac:parameter ac:name="maxLevel">3</ac:parameter>
+</ac:structured-macro>
+
+<h2>Overview</h2>
+<ac:structured-macro ac:name="info" ac:schema-version="1">
+  <ac:rich-text-body>
+    <p>{{PIPELINE_OVERVIEW}}</p>
+    <ul>
+      <li><strong>Owning team:</strong> {{OWNING_TEAM}}</li>
+      <li><strong>Schedule:</strong> {{SCHEDULE}}</li>
+      <li><strong>Owner:</strong> {{OWNER}}</li>
+      <li><strong>DAG ID:</strong> <code>{{DAG_ID}}</code></li>
+    </ul>
+  </ac:rich-text-body>
+</ac:structured-macro>
+
+<h2>Pipeline Diagram</h2>
+{{page.diagram_placeholder}}
+
+<h2>Source Tables</h2>
+<table class="wrapped">
+  <thead>
+    <tr><th>Table</th><th>Schema</th><th>Filter</th><th>Volume</th></tr>
+  </thead>
+  <tbody>
+    {{SOURCE_TABLE_ROWS}}
+  </tbody>
+</table>
+
+<h2>Transformation Steps</h2>
+<ol>
+  {{TRANSFORMATION_STEPS}}
+</ol>
+
+<h2>Output Schema</h2>
+<table class="wrapped">
+  <thead>
+    <tr><th>Column</th><th>Type</th><th>Description</th><th>Source</th></tr>
+  </thead>
+  <tbody>
+    {{OUTPUT_SCHEMA_ROWS}}
+  </tbody>
+</table>
+
+<h2>Write Specifications</h2>
+<ul>
+  <li><strong>Output table:</strong> <code>{{OUTPUT_TABLE}}</code></li>
+  <li><strong>Write mode:</strong> {{WRITE_MODE}}</li>
+  <li><strong>Partition columns:</strong> {{PARTITION_COLUMNS}}</li>
+  <li><strong>S3 path:</strong> <code>{{S3_PATH}}</code></li>
+</ul>
+
+<h2>Data Quality Checks</h2>
+<ul>
+  {{DATA_QUALITY_CHECKS}}
+</ul>
+
+<h2>Volume &amp; Growth</h2>
+<ac:structured-macro ac:name="info" ac:schema-version="1">
+  <ac:rich-text-body>
+    <ul>
+      <li><strong>Approximate row count:</strong> {{ROW_COUNT}}</li>
+      <li><strong>Data size:</strong> {{DATA_SIZE}}</li>
+      <li><strong>Growth rate:</strong> {{GROWTH_RATE}}</li>
+    </ul>
+  </ac:rich-text-body>
+</ac:structured-macro>
+
+<h2>Dependencies</h2>
+<ul>
+  {{DEPENDENCIES}}
+</ul>
+
+<h2>SLA &amp; Error Handling</h2>
+<ac:structured-macro ac:name="warning" ac:schema-version="1">
+  <ac:rich-text-body>
+    <ul>
+      <li><strong>Expected completion time:</strong> {{SLA_COMPLETION_TIME}}</li>
+      <li><strong>Retry logic:</strong> {{RETRY_LOGIC}}</li>
+      <li><strong>Failure alerts:</strong> {{FAILURE_ALERTS}}</li>
+    </ul>
+  </ac:rich-text-body>
+</ac:structured-macro>

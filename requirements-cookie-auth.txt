@@ -1,0 +1,4 @@
+# Install ONLY if using cookie-based auth (Atlassian Server/DC without PAT)
+# Run: pip install -r requirements-cookie-auth.txt
+# Then: playwright install chromium
+playwright>=1.40.0

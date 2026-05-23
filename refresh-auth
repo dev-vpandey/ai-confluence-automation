@@ -1,0 +1,8 @@
+#!/bin/bash
+# Confluence Cookie Auto-Refresh Wrapper
+# Usage: ./refresh-auth [--manual]
+
+cd "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source venv/bin/activate
+
+python src/refresh_cookies.py "$@"

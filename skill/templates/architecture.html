@@ -1,0 +1,161 @@
+<!-- ============================================================
+     ARCHITECTURE / DESIGN DOC TEMPLATE
+     Reference: reference/architecture_ref_template.md
+     Sections (in order — never reorder, never omit):
+       1.  Header Metadata (info panel)
+       2.  Version History (wrapped table)
+       3.  Problem
+       4.  Goal
+       5.  Non-Goals
+       6.  Architecture (diagram placeholder + Components h3)
+       7.  Proposed Solution (overview + End-to-end flow h3 + Why this approach h3)
+       8.  Key Decisions (h3 per decision)
+       8.  Data Model (code block or N/A)
+       9.  API / Interface Changes (code block or N/A)
+       10. Security & Access
+       11. Observability
+       12. Performance Envelope
+       13. Testing Strategy
+       14. Error Handling (wrapped table)
+       15. Rollout Plan (warning macro for rollback)
+       16. Open Questions (info macro + task-list)
+       17. References
+     ============================================================ -->
+
+<ac:structured-macro ac:name="toc" ac:schema-version="1">
+  <ac:parameter ac:name="maxLevel">3</ac:parameter>
+</ac:structured-macro>
+
+<ac:structured-macro ac:name="info" ac:schema-version="1">
+  <ac:rich-text-body>
+    <p><strong>Author:</strong> {{AUTHOR}} | <strong>Date:</strong> {{DATE}} | <strong>Status:</strong> {{STATUS}} | <strong>Audience:</strong> {{AUDIENCE}}</p>
+    <p><strong>PRD:</strong> <a href="{{PRD_LINK}}">{{PRD_LINK_TEXT}}</a> | <strong>Reviewers:</strong> {{REVIEWERS}} | <strong>Approved by:</strong> {{APPROVED_BY}} — {{APPROVED_DATE}}</p>
+  </ac:rich-text-body>
+</ac:structured-macro>
+
+<h2>Version History</h2>
+<table class="wrapped">
+  <thead>
+    <tr><th>Version</th><th>Date</th><th>Author</th><th>Summary of Changes</th></tr>
+  </thead>
+  <tbody>
+    {{VERSION_HISTORY_ROWS}}
+  </tbody>
+</table>
+
+<h2>Problem</h2>
+<p>{{PROBLEM}}</p>
+
+<h2>Goal</h2>
+<p>{{GOAL}}</p>
+
+<h2>Non-Goals</h2>
+<ul>
+  {{NON_GOALS}}
+</ul>
+
+<h2>Architecture</h2>
+<p>{{ARCHITECTURE_OVERVIEW}}</p>
+
+{{page.diagram_placeholder}}
+
+<h3>Components</h3>
+<ul>
+  <li><strong>Deployment:</strong> {{DEPLOYMENT}}</li>
+  <li><strong>Data Flow:</strong> {{DATA_FLOW_TYPE}}</li>
+  <li><strong>External Dependencies:</strong>
+    <ul>
+      {{EXTERNAL_DEPENDENCIES}}
+    </ul>
+  </li>
+</ul>
+{{COMPONENTS}}
+
+<h2>Proposed Solution</h2>
+<p>{{PROPOSED_SOLUTION_OVERVIEW}}</p>
+
+<h3>End-to-end flow</h3>
+<ol>
+  {{PROPOSED_SOLUTION_FLOW}}
+</ol>
+
+<h3>Why this approach</h3>
+<ul>
+  {{PROPOSED_SOLUTION_WHY}}
+</ul>
+
+<h2>Key Decisions</h2>
+{{KEY_DECISIONS}}
+
+<h2>Data Model</h2>
+<ac:structured-macro ac:name="code" ac:schema-version="1">
+  <ac:parameter ac:name="language">sql</ac:parameter>
+  <ac:plain-text-body><![CDATA[{{DATA_MODEL}}]]></ac:plain-text-body>
+</ac:structured-macro>
+
+<h2>API / Interface Changes</h2>
+<ac:structured-macro ac:name="code" ac:schema-version="1">
+  <ac:parameter ac:name="language">text</ac:parameter>
+  <ac:plain-text-body><![CDATA[{{API_CHANGES}}]]></ac:plain-text-body>
+</ac:structured-macro>
+
+<h2>Security &amp; Access</h2>
+<ul>
+  <li><strong>Auth mechanism:</strong> {{AUTH_MECHANISM}}</li>
+  <li><strong>PII / sensitive data:</strong> {{PII_DETAILS}}</li>
+  <li><strong>Threat surface changes:</strong> {{THREAT_SURFACE}}</li>
+</ul>
+
+<h2>Observability</h2>
+<ul>
+  <li><strong>Metrics:</strong> {{METRICS}}</li>
+  <li><strong>Logs:</strong> {{LOGS}}</li>
+  <li><strong>Alerts:</strong> {{ALERTS}}</li>
+</ul>
+
+<h2>Performance Envelope</h2>
+<ul>
+  <li><strong>Expected throughput:</strong> {{THROUGHPUT}}</li>
+  <li><strong>Latency SLO (p99):</strong> {{LATENCY_SLO}}</li>
+  <li><strong>Scale ceiling:</strong> {{SCALE_CEILING}}</li>
+</ul>
+
+<h2>Testing Strategy</h2>
+<ul>
+  <li><strong>Unit:</strong> {{UNIT_TESTING}}</li>
+  <li><strong>Integration:</strong> {{INTEGRATION_TESTING}}</li>
+  <li><strong>Load / stress:</strong> {{LOAD_TESTING}}</li>
+  <li><strong>Rollout gate:</strong> {{ROLLOUT_GATE}}</li>
+</ul>
+
+<h2>Error Handling</h2>
+<table class="wrapped">
+  <thead>
+    <tr><th>Scenario</th><th>Behavior</th></tr>
+  </thead>
+  <tbody>
+    {{ERROR_HANDLING_ROWS}}
+  </tbody>
+</table>
+
+<h2>Rollout Plan</h2>
+<ul>
+  {{ROLLOUT_PHASES}}
+</ul>
+<ac:structured-macro ac:name="warning" ac:schema-version="1">
+  <ac:rich-text-body><p><strong>Rollback:</strong> {{ROLLBACK_PROCEDURE}}</p></ac:rich-text-body>
+</ac:structured-macro>
+
+<h2>Open Questions</h2>
+<ac:structured-macro ac:name="info" ac:schema-version="1">
+  <ac:rich-text-body>
+    <ac:task-list>
+      {{OPEN_QUESTIONS}}
+    </ac:task-list>
+  </ac:rich-text-body>
+</ac:structured-macro>
+
+<h2>References</h2>
+<ul>
+  {{REFERENCES}}
+</ul>

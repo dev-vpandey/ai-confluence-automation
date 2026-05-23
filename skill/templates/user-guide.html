@@ -1,0 +1,73 @@
+<!-- ============================================================
+     USER GUIDE TEMPLATE
+     Reference: reference/user_guide_ref_template.md
+     Sections (in order — never reorder, never omit):
+       1. Header Metadata (info panel)
+       2. What this does (+ Does NOT cover line)
+       3. Prerequisites (ul plain bullets + contact line)
+       4. Quick Start (ol + expected result)
+       5. Common Tasks (h3 per task + ol)
+       6. Limitations (warning macro + ul)
+       7. Reference (h3 per term)
+       8. Troubleshooting (wrapped table + contact + feedback)
+       9. What changed in this version (bullets + release notes link)
+     ============================================================ -->
+
+<ac:structured-macro ac:name="toc" ac:schema-version="1">
+  <ac:parameter ac:name="maxLevel">3</ac:parameter>
+</ac:structured-macro>
+
+<ac:structured-macro ac:name="info" ac:schema-version="1">
+  <ac:rich-text-body>
+    <p><strong>Audience:</strong> {{AUDIENCE}} | <strong>Last updated:</strong> {{LAST_UPDATED}} | <strong>Version:</strong> {{VERSION}}</p>
+  </ac:rich-text-body>
+</ac:structured-macro>
+
+<h2>What this does</h2>
+<p>{{WHAT_THIS_DOES}}</p>
+<p><strong>Does NOT cover:</strong> {{DOES_NOT_COVER}}</p>
+
+<h2>Prerequisites</h2>
+<ul>
+  {{PREREQUISITES}}
+</ul>
+<p>Need access? Contact: {{ACCESS_CONTACT}}</p>
+
+<h2>Quick Start</h2>
+<ol>
+  {{QUICK_START_STEPS}}
+</ol>
+<p><strong>Expected result:</strong> {{QUICK_START_EXPECTED_RESULT}}</p>
+
+<h2>Common Tasks</h2>
+{{COMMON_TASKS}}
+
+<h2>Limitations</h2>
+<ac:structured-macro ac:name="warning" ac:schema-version="1">
+  <ac:rich-text-body>
+    <ul>
+      {{LIMITATIONS}}
+    </ul>
+  </ac:rich-text-body>
+</ac:structured-macro>
+
+<h2>Reference</h2>
+{{REFERENCE_TERMS}}
+
+<h2>Troubleshooting</h2>
+<table class="wrapped">
+  <thead>
+    <tr><th>Problem</th><th>Likely Cause</th><th>Fix</th></tr>
+  </thead>
+  <tbody>
+    {{TROUBLESHOOTING_ROWS}}
+  </tbody>
+</table>
+<p>Still stuck? Contact: {{SUPPORT_CONTACT}}</p>
+<p><strong>Feedback:</strong> {{FEEDBACK_LINK}}</p>
+
+<h2>What changed in this version</h2>
+<ul>
+  {{CHANGELOG_ITEMS}}
+</ul>
+<p><a href="{{RELEASE_NOTES_LINK}}">Full release notes</a></p>

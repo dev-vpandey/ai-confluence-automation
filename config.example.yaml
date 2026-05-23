@@ -1,0 +1,8 @@
+confluence:
+  base_url: "https://your-confluence-instance.com"
+  session_file: "~/.confluence-session"
+
+timeouts:
+  health_check: 5
+  search: 10
+  create_page: 30
