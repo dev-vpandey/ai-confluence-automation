@@ -2,6 +2,8 @@
 
 Create, update, and search Confluence pages from natural language via Claude Code. Works with Atlassian Cloud and Server/DC.
 
+> If this saves you time, a ⭐ on the repo helps others find it.
+
 ## Install
 
 ```bash
